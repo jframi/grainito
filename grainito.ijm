@@ -24,13 +24,12 @@ list = getFileList(dir);
 // on ne voit pas les operations a l'ecran
 setBatchMode(true);
 //Selectionne la couleur de fond
-//Selectionne le méthode de seuil
 Dialog.create("Choose a background color:");
 Dialog.addMessage("Please choose");
 Dialog.addChoice("Choice:", newArray("Black","White"));
 Dialog.show();
 myChoiceBackg=Dialog.getChoice();
-//Selectionne le méthode de seuil
+//Selectionne la méthode de seuil
 Dialog.create("Choose a threshold method:");
 Dialog.addMessage("Please choose");
 Dialog.addChoice("Choice:", newArray("Default dark", "Huang dark", "Intermodes dark", "IsoData dark", "IJ_IsoData dark", "Li dark", "MaxEntropy dark", "Mean dark", "MinError dark", "Minimum dark", "Moments dark", "Otsu dark", "Percentile dark", "RenyiEntropy dark", "Shanbhag dark", "Triangle dark", "Yen dark"));

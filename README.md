@@ -1,7 +1,9 @@
 # grainito
 Grainito automatise l'analyse avec ImageJ (http://imagej.nih.gov/ij/) d'images de grains (sorgho, mil) scannés sur un scanner à plat.
 
-Le programme analyse l'ensemble des images contenues dans un répertoire.
+Le programme analyse l'ensemble des images ayant l'extension jpg contenues dans un répertoire.
+
+Il est conseillé de travailler sur un répertoire ne contenant que les images à analyser.
 
 ## Installation
 

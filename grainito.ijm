@@ -48,16 +48,15 @@ for (i=0; i<list.length; i++) {
 	run("Threshold...");
 	setAutoThreshold(myChoicethres); 
 	run("Set Measurements...", "area mean perimeter bounding fit shape feret's integrated median skewness kurtosis area_fraction stack redirect=None decimal=3");
-	run("Analyze Particles...", "size=200-Infinity circularity=0.00-1.00 show=[Bare Outlines] display exclude clear summarize add"); 
+	run("Analyze Particles...", "size=50-Infinity circularity=0.00-1.00 show=[Bare Outlines] display exclude clear summarize add"); 
 	run("Close-");
 	run("Fill Holes");
 	run("Watershed");
 	run("Set Measurements...", "area mean perimeter bounding fit shape feret's integrated median skewness kurtosis area_fraction stack redirect="+list[i]+" decimal=3");
-	run("Analyze Particles...", "size=200-Infinity circularity=0.00-1.00 show=Masks display exclude clear summarize add");
+	run("Analyze Particles...", "size=50-Infinity circularity=0.00-1.00 show=Masks display exclude clear summarize add");
 	saveAs("Jpeg", dir+list[i]+"_Mask_"+ myChoicethres+".jpg");
 	selectWindow("Results"); 
 	saveAs("Text", dir+list[i]+"."+ myChoicethres+".txt");
 	run("Close All"); 
 	}
-} 
-
+}

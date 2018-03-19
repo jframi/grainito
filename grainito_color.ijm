@@ -90,7 +90,19 @@ for (i=0; i<list.length; i++) {
 		selectWindow("Mask of "+a);
 		run("Duplicate...", "title=Mask of "+a+"backup");
 		saveAs("Jpeg", dir+"masks/"+list[i]+"main_mask.jpg");
+		// Export cropped image with outlines
+		run("Duplicate...", "title=outlineexport");
+		run("Outline");
+		run("Dilate");
+		run("Red");
+		selectWindow(list[i]);
+		run("Duplicate...", "title="+list[i]+"outline.jpg");
+		run("Add Image...", "image=outlineexport x=0 y=0 opacity=100 zero");
+		saveAs("Jpeg", dir+"masks/"+list[i]+"outline.jpg");
 		close();
+		selectWindow("outlineexport");
+		close();
+		// Save Main report
 		selectWindow("Results");
 		saveAs("Text", dir+list[i]+".main.txt");
 

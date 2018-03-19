@@ -97,28 +97,28 @@ for (i=0; i<list.length; i++) {
 		// Go back to original image and split to RGB
 		selectWindow(list[i]);
 		run("Split Channels");
-		minsize=minsize/3;
+		mins=minsize/3;
 		selectWindow("Mask of "+a);
 		for (e=1; e<erodepth; e++) {
 			run("Erode");
 		}
 		run("Duplicate...", "title="+list[i]+"backup2");
 		run("Set Measurements...", "mean redirect='"+list[i]+" (red)' decimal=0");
-		run("Analyze Particles...", "size="+minsize+"-"+maxsize+" circularity="+mincirc+"-1.00 show=Masks display exclude clear");
+		run("Analyze Particles...", "size="+mins+"-"+maxsize+" circularity="+mincirc+"-1.00 show=Masks display exclude clear");
 		selectWindow("Results");
 		saveAs("Text", dir+list[i]+".red.txt");
 		close();
 		selectWindow("Mask of "+a);
 		run("Duplicate...", "title="+list[i]+"backup3");
 		run("Set Measurements...", "mean redirect='"+list[i]+" (green)' decimal=0");
-		run("Analyze Particles...", "size="+minsize+"-"+maxsize+" circularity="+mincirc+"-1.00 show=Masks display exclude clear");
+		run("Analyze Particles...", "size="+mins+"-"+maxsize+" circularity="+mincirc+"-1.00 show=Masks display exclude clear");
 		selectWindow("Results");
 		saveAs("Text", dir+list[i]+".green.txt");
 		close();
 		selectWindow("Mask of "+a);
 		run("Duplicate...", "title="+list[i]+"backup4");
 		run("Set Measurements...", "mean redirect='"+list[i]+" (blue)' decimal=0");
-		run("Analyze Particles...", "size="+minsize+"-"+maxsize+" circularity="+mincirc+"-1.00 show=Masks display exclude clear");
+		run("Analyze Particles...", "size="+mins+"-"+maxsize+" circularity="+mincirc+"-1.00 show=Masks display exclude clear");
 
 		selectWindow("Results");
 		saveAs("Text", dir+list[i]+".blue.txt");

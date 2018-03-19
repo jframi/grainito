@@ -32,7 +32,7 @@ The program will ask for different parameters:
 - Grain size range and circularity
     + minsize: min grain size
     + maxsize: max grain size
-    + mincirc: min grain size
+    + mincirc: min grain circularity
 - Use watershed: watershed improves seperation of clingy grains
     + watershed: 0 for no and 1 for yes
 - Erode before getting particles RGB components

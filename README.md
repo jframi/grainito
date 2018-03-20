@@ -19,7 +19,7 @@ Alternatively, the macro files can be saved in the **plugins** directory of Imag
 
 ## Analysis
 
-### Color (grainito_color)
+### Color (grainito_color.ijm)
 This is the preferred version as a colored (green or blue) background is more efficient for grain detection.
 The program will ask for different parameters:
 
@@ -40,7 +40,7 @@ The program will ask for different parameters:
 
 
 
-### Black and white
+### Black and white (grainito.ijm)
 Choisir la couleur de fond des images (Black or White)
 
 Choisir une méthode de seuillage automatique (voir doc ImageJ)

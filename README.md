@@ -8,14 +8,7 @@ It is an ImageJ macro that automatically analyses all jpg images in a given dire
 
 ## Installation
 
-Save the macro files (grainito.ijm and grainito_color.ijm) in the **macro** directory of ImageJ (or wherever you prefer)
-
-In ImageJ, select Plugins>Macros>Install...  
-then select the macro file (grainito_color.ijm or grainito.ijm)
-
-Then select Plugins>Macros>grainito_color or grainito to start the macro
-
-Alternatively, the macro files can be saved in the **plugins** directory of ImageJ. In this case the two macros will be available in the Plugins menu.
+Save the macro files (grainito.ijm and grainito_color.ijm) in the **plugins** directory of ImageJ. Start ImageJ, the two macros will be available in the Plugins menu.
 
 ## Analysis
 

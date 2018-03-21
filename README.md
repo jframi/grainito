@@ -34,19 +34,20 @@ The program will ask for different parameters:
 
 
 ### Black and white (grainito.ijm)
-Choisir la couleur de fond des images (Black or White)
 
-Choisir une méthode de seuillage automatique (voir doc ImageJ)
+Choose background color (Black or White)
 
-L'analyse de toutes les images (*.jpg) contenues dans le répertoire se fait automatiquement.
+Choose a threshold method (see ImageJ documentation)
 
-Le programme sauve pour chaque image :
-- un fichier image.mask.jpg : image seuillée qui contient les grains détectés
-- un fichier image.txt : tableau avec une ligne par grain et les caractéristiques de chaque grain
+All images (*.jpg) of the directory will be analysed.
+
+The macro will save for each image :
+- a new image named image.mask.jpg : thresholded image with detected grains
+- a text file named image.txt : a table with one row per grain and morphological variables
 
 
 
-## Post analyse
+## Post analysis
 
 Le script perl postgrainito.pl permet de concaténer tous les fichiers txt en un seul en rajoutant le nom du fichier en première colonne.
 

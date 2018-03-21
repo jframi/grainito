@@ -24,6 +24,11 @@ dir = getDirectory("Choose a Directory ");
 // Use this one in case of batch usage
 //dir=getArgument()
 
+// Create masks subdirectory if not exists
+if (File.exists(dir+File.separator+"masks")!=1){
+	File.makeDirectory(dir+File.separator+"masks"); 
+}
+
 // list of files in the directory
 list = getFileList(dir); 
 

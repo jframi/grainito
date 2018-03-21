@@ -18,10 +18,11 @@ Start ImageJ, the two macros will be available in the Plugins menu.
 
 #### Color (recommended)
 
-Use a green of blue background on the scanner lid
+Use a green or blue background inside the scanner lid
 
 #### Black and white
 
+It is recommended to leave the lid open to get a black background (provided the grains are not to dark). In case the grains are dark the lid will have to be closed with a white background but the shadow will be difficult to handle
 
 ### Color (grainito_color.ijm)
 This is the preferred version as a colored (green or blue) background is more efficient for grain detection.
@@ -67,7 +68,6 @@ All images (*.jpg) of the directory will be analysed.
 The program will save for each image :
 - a new image named image.mask.jpg : thresholded image with detected grains
 - a text file named image.txt : a table with one row per grain and morphological variables
-
 
 
 ## Post analysis

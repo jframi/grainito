@@ -72,16 +72,18 @@ for (i=0; i<list.length; i++) {
 
 			// Thresholder on Hue
 			a=getTitle();
-			run("HSB Stack");
+			run("Lab Stack");
 			run("Convert Stack to Images");
-			selectWindow("Saturation");
+			selectWindow("L*");
 			close();
-			selectWindow("Brightness");
+			selectWindow("b*");
 			close();
-			selectWindow("Hue");
-			setThreshold(huemin, huemax);
+			selectWindow("a*");
+			//setThreshold(huemin, huemax);
+			run("8-bit");
+			setAutoThreshold(); 
 			run("Convert to Mask");
-			run("Invert");
+			//run("Invert");
 			rename(a);
 		// Median Filter to eliminate single white points
 		run("Median...", "radius="+median_radius);

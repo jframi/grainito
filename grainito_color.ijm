@@ -40,8 +40,8 @@ setBatchMode(true);
 	sizew = getNumber("Crop image width", 5000);
 	sizeh = getNumber("Crop image height", 3000);
 	// Hue threshold
-	huemin = getNumber("Hue threshold min value", 68);
-	huemax = getNumber("Hue threshold max value", 108);
+	// huemin = getNumber("Hue threshold min value", 68);
+	// huemax = getNumber("Hue threshold max value", 108);
 	// Grain size range and circularity
 	minsize = getNumber("Grain min size (area)", 4000);
 	maxsize = getNumber("Grain max size (area)", 8000);
